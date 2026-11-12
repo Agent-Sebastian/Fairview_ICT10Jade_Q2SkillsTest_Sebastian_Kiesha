@@ -3,7 +3,7 @@ from pyscript import display, document
 def find(e):
     document.getElementById("output").innerHTML = ""
 
-    gottensymbol = document.getElementById("symbol").value.title
+    element_Name = document.getElementById("symbol").value.title
 
     AllElements = {
     "H": ("Hydrogen", 1, 1.008),
@@ -42,10 +42,10 @@ def find(e):
     }
 
 
-    finder = dict.get(gottensymbol, ("Element not found", "-", "-"))
+    finder = dict.get(element_Name, ("Element not found", "-", "-"))
 
     document.getElementById("output1").innerHTML = f"""
-    Symbol: {gottensymbol}<br>
+    Symbol: {element_Name}<br>
     Element: {finder[0]}<br>
     Atomic Number: {finder[1]}<br>
     Atomic Mass: {finder[2]}
