@@ -1,9 +1,9 @@
 from pyscript import display, document
 
 def find(e):
-    document.getElementById("output").innerHTML = ""
+    document.getElementById("output1").innerHTML = ""
 
-    element_Name = document.getElementById("symbol").value.title
+    element_Name = document.getElementById("symbol").value.title()
 
     AllElements = {
     "H": ("Hydrogen", 1, 1.008),
@@ -42,7 +42,7 @@ def find(e):
     }
 
 
-    finder = dict.get(element_Name, ("Element not found", "-", "-"))
+    finder = AllElements.get(element_Name, ("Element not found", "-", "-"))
 
     document.getElementById("output1").innerHTML = f"""
     Symbol: {element_Name}<br>
